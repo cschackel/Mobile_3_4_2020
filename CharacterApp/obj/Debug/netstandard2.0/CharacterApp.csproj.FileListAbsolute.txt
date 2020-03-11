@@ -1,0 +1,12 @@
+/Users/cschackel/Projects/CharacterApp/CharacterApp/obj/Debug/netstandard2.0/CharacterApp.csprojAssemblyReference.cache
+/Users/cschackel/Projects/CharacterApp/CharacterApp/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/cschackel/Projects/CharacterApp/CharacterApp/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/cschackel/Projects/CharacterApp/CharacterApp/obj/Debug/netstandard2.0/CharacterApp.csproj.CoreCompileInputs.cache
+/Users/cschackel/Projects/CharacterApp/CharacterApp/obj/Debug/netstandard2.0/CharacterApp.AssemblyInfoInputs.cache
+/Users/cschackel/Projects/CharacterApp/CharacterApp/obj/Debug/netstandard2.0/CharacterApp.AssemblyInfo.cs
+/Users/cschackel/Projects/CharacterApp/CharacterApp/obj/Debug/netstandard2.0/CharacterApp.dll
+/Users/cschackel/Projects/CharacterApp/CharacterApp/obj/Debug/netstandard2.0/CharacterApp.pdb
+/Users/cschackel/Projects/CharacterApp/CharacterApp/bin/Debug/netstandard2.0/CharacterApp.deps.json
+/Users/cschackel/Projects/CharacterApp/CharacterApp/bin/Debug/netstandard2.0/CharacterApp.dll
+/Users/cschackel/Projects/CharacterApp/CharacterApp/bin/Debug/netstandard2.0/CharacterApp.pdb
+/Users/cschackel/Projects/CharacterApp/CharacterApp/obj/Debug/netstandard2.0/XamlC.stamp

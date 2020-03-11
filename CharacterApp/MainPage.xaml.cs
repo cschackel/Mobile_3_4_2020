@@ -31,19 +31,19 @@ namespace CharacterApp
             else
             {
                 mainLabel.Text = "No Questions";
-                disableButtons();
+                //disableButtons();
             }
             currentQuestion = questions.First();
             currentScore = 0;
 
         }
-
+        /*
         private void disableButtons()
         {
             falseBtn.IsVisible = false;
             trueBtn.IsVisible = false;
         }
-
+        */
         private void questionChange()
         {
 
@@ -55,13 +55,55 @@ namespace CharacterApp
             }
             else
             {
-                disableButtons();
+                //disableButtons();
                 determineCharacter();
             }
         }
 
         private void determineCharacter()
         {
+            if(age_field.Text!=null && age_field.Text!="")
+            {
+                int age = 0;
+                
+                if (int.TryParse(age_field.Text, out age))
+                {
+                    if(age > 80)
+                    {
+                        currentScore -= 10;
+                    }
+                    else if(age > 40)
+                    {
+                        currentScore += 3;
+                    }
+                    else if (age > 30)
+                    {
+                        currentScore += 2;
+                    }
+                    else if (age > 20)
+                    {
+                        currentScore += 2;
+                    }
+                }
+            }
+            if(name_field.Text!=null && name_field.Text!="")
+            {
+                if(name_field.Text.First()=='T'||name_field.Text.Contains("'"))
+                {
+                    currentScore -= 10;
+                } else if (name_field.Text.First() == 'S')
+                {
+                    currentScore += 1;
+                }
+                else if (name_field.Text.First() == 'D')
+                {
+                    currentScore -= 3;
+                }
+                else if (name_field.Text.First() == 'J')
+                {
+                    currentScore += 3;
+                }
+            }
             foreach(Characters c in characters)
             {
                 if(currentScore >= c.MinScore && currentScore <= c.MaxScore)
@@ -72,7 +114,7 @@ namespace CharacterApp
         }
 
 
-
+        /*
         public void OnTrueClick(object sender, EventArgs args)
         {
             currentScore += currentQuestion.TrueValue;
@@ -83,6 +125,20 @@ namespace CharacterApp
         {
             currentScore += currentQuestion.FalseValue;
             questionChange();
+        }
+        */
+        public void OnSwipe(Object sender, SwipedEventArgs args)
+        {
+            if(args.Direction == SwipeDirection.Left)
+            {
+                currentScore += currentQuestion.FalseValue;
+                questionChange();
+            }
+            else if (args.Direction == SwipeDirection.Right)
+            {
+                currentScore += currentQuestion.TrueValue;
+                questionChange();
+            }
         }
 
     }

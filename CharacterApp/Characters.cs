@@ -26,10 +26,10 @@ namespace CharacterApp
             All = new List<Characters>
             {
                 // Part 1. Getting Started with XAML
-                new Characters("Teal'c",-10,-6),
+                new Characters("Teal'c",-100,-6),
                 new Characters("Daniel",-5,-1),
                 new Characters("Sam",0,5),
-                new Characters("Jack",6,10),
+                new Characters("Jack",6,100),
             };
         }
 

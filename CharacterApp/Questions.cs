@@ -31,9 +31,9 @@ namespace CharacterApp
                                       2,-2),
                 new Questions("Have you now,or at any time, been dead?",
                                       -2,2),
-                new Questions("Do you like Minnesoda",
+                new Questions("Do you like Minnesota?",
                                       3,-3),
-                new Questions("are you an orphan?",
+                new Questions("Are you an orphan?",
                                       -3,3)
             };
         }

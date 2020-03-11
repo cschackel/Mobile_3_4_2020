@@ -8,13 +8,31 @@
 
     <StackLayout>
         <Frame>
+            <Entry Placeholder="Enter Name" x:Name="name_field"></Entry>
+            
+        </Frame>
+
+        <Frame>
+            <Entry Placeholder="Enter Age" x:Name="age_field"></Entry>
+        </Frame>
+        <Frame>
         <Label x:Name="mainLabel"
             Text="" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="CenterAndExpand">
+            <Label.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwipe"/>
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwipe"/>
+            </Label.GestureRecognizers>
+            </Label>
             </Frame>
+        <!--
         <Button Text="True" Clicked="OnTrueClick" x:Name="trueBtn"/>
         <Button Text="False" Clicked="OnFalseClick" x:Name="falseBtn"/>
+        -->
+        <Label Text="Swipe Left for False, Right for True">
+
+        </Label>
     </StackLayout>
 
 </ContentPage>
