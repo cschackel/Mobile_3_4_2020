@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:CharacterApp"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CharacterApp.MainPage">
@@ -32,7 +33,22 @@
         -->
         <Label Text="Swipe Left for False, Right for True">
 
+            
+
         </Label>
+
+       
+        <Label x:Name="scoreLabel" Text="{Binding testValue}"/>
+        <Label Text="{Binding Path=currentScore}"
+           FontSize="Large"
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+        <Label.BindingContext>
+            <local:PageViewModel />
+        </Label.BindingContext>
+    </Label>
+        
+        
     </StackLayout>
 
 </ContentPage>

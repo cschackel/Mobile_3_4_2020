@@ -15,12 +15,22 @@ namespace CharacterApp
     {
         IList<Characters> characters;
         IList<Questions> questions;
-        Questions currentQuestion;
-        int currentScore;
+        public Questions currentQuestion { get; set; }
+        PageViewModel pvm = new PageViewModel();
+        //public int pvm.currentScore { get; set; } = 0;
+
+        public string testValue { get; set; } = "TEST";
 
         public MainPage()
         {
             InitializeComponent();
+            //BindingContext = this;
+            if (scoreLabel != null)
+            {
+                //scoreLabel.BindingContext = pvm.currentScore;
+            }
+
+
             questions = Questions.All;
             characters = Characters.All;
             if(questions.Count > 0 && characters.Count > 0)
@@ -34,7 +44,7 @@ namespace CharacterApp
                 //disableButtons();
             }
             currentQuestion = questions.First();
-            currentScore = 0;
+            pvm.currentScore = 0;
 
         }
         /*
@@ -70,19 +80,19 @@ namespace CharacterApp
                 {
                     if(age > 80)
                     {
-                        currentScore -= 10;
+                        pvm.currentScore -= 10;
                     }
                     else if(age > 40)
                     {
-                        currentScore += 3;
+                        pvm.currentScore += 3;
                     }
                     else if (age > 30)
                     {
-                        currentScore += 2;
+                        pvm.currentScore += 2;
                     }
                     else if (age > 20)
                     {
-                        currentScore += 2;
+                        pvm.currentScore += 2;
                     }
                 }
             }
@@ -90,23 +100,23 @@ namespace CharacterApp
             {
                 if(name_field.Text.First()=='T'||name_field.Text.Contains("'"))
                 {
-                    currentScore -= 10;
+                    pvm.currentScore -= 10;
                 } else if (name_field.Text.First() == 'S')
                 {
-                    currentScore += 1;
+                    pvm.currentScore += 1;
                 }
                 else if (name_field.Text.First() == 'D')
                 {
-                    currentScore -= 3;
+                    pvm.currentScore -= 3;
                 }
                 else if (name_field.Text.First() == 'J')
                 {
-                    currentScore += 3;
+                    pvm.currentScore += 3;
                 }
             }
             foreach(Characters c in characters)
             {
-                if(currentScore >= c.MinScore && currentScore <= c.MaxScore)
+                if(pvm.currentScore >= c.MinScore && pvm.currentScore <= c.MaxScore)
                 {
                     mainLabel.Text = "You are "+ c.Name;
                 }
@@ -117,13 +127,13 @@ namespace CharacterApp
         /*
         public void OnTrueClick(object sender, EventArgs args)
         {
-            currentScore += currentQuestion.TrueValue;
+            pvm.currentScore += currentQuestion.TrueValue;
             questionChange();
         }
 
         public void OnFalseClick(object sender, EventArgs args)
         {
-            currentScore += currentQuestion.FalseValue;
+            pvm.currentScore += currentQuestion.FalseValue;
             questionChange();
         }
         */
@@ -131,12 +141,12 @@ namespace CharacterApp
         {
             if(args.Direction == SwipeDirection.Left)
             {
-                currentScore += currentQuestion.FalseValue;
+                pvm.currentScore += currentQuestion.FalseValue;
                 questionChange();
             }
             else if (args.Direction == SwipeDirection.Right)
             {
-                currentScore += currentQuestion.TrueValue;
+                pvm.currentScore += currentQuestion.TrueValue;
                 questionChange();
             }
         }

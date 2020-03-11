@@ -1,19 +1,21 @@
 ﻿<Properties StartupConfiguration="{52B41B57-6B8C-4603-98ED-CDAEAFDBD165}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CharacterApp/MainPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CharacterApp/PageViewModel.cs">
     <Files>
-      <File FileName="CharacterApp/MainPage.xaml" Line="1" Column="1" />
-      <File FileName="CharacterApp/MainPage.xaml.cs" Line="69" Column="50" />
-      <File FileName="CharacterApp/Characters.cs" />
-      <File FileName="CharacterApp/Questions.cs" />
+      <File FileName="CharacterApp/MainPage.xaml" Line="35" Column="35" />
+      <File FileName="CharacterApp/MainPage.xaml.cs" Line="24" Column="50" />
+      <File FileName="CharacterApp/Characters.cs" Line="32" Column="44" />
+      <File FileName="CharacterApp/Questions.cs" Line="34" Column="52" />
       <File FileName="CharacterApp/App.xaml" />
       <File FileName="CharacterApp/App.xaml.cs" />
+      <File FileName="CharacterApp/PageViewModel.cs" Line="8" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CharacterApp" expanded="True">
             <Node name="CharacterApp" expanded="True">
-              <Node name="MainPage.xaml" expanded="True" selected="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+              <Node name="PageViewModel.cs" selected="True" />
             </Node>
           </Node>
         </State>
